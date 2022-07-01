@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico">
+    <title>Page not Found</title>
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin-right: 14vw;
+            margin-left: 14vw;
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            font-size: 18px;
+            min-width: 300px;
+            height: 78px;
+            background-color: black;
+            color: #FA2759;
+            border-color: #FA2759;
+            cursor: pointer;
+            animation: 225ms ease-in-out;
+
+        }
+
+        button:hover {
+            background-color: #FA2759;
+            color: black;
+        }
+
+        img {
+            width: 360px;
+            height: 360px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        div {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media(max-width: 1286px) {
+            img {
+                width: 280px;
+                height: 280px;
+            }
+        }
+
+        @media(max-width: 1000px) and (min-width: 720px) {
+            img {
+                width: 250px;
+                height: 250px;
+            }
+
+            body {
+                margin-right: 4vw;
+                margin-left: 4vw;
+            }
+        }
+
+        @media(max-width: 720px) {
+            img {
+                width: 200px;
+                height: 200px;
+                display: block;
+                margin-bottom: 50px;
+            }
+
+            body {
+                margin-right: 1vw;
+                margin-left: 1vw;
+                flex-direction: column-reverse;
+                margin-top: 25px;
+                align-items: center;
+                text-align: center;
+            }
+
+            button {
+                min-width: 0;
+            }
+
+            div {
+                justify-content: center;
+                height: 45vh;
+            }
+        }
+        h2 {
+            margin-bottom: 48px;
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>OOPS!</h1>
+        <h2> I can't find the page you're looking for. </h2>
+        <button href="https://rinatmadreiter.github.io/">Click here to visit my Portfolio Website :)</button>
+    </div>
+
+    <img src="assets/img/profile.jpg">
+
+</body>
+
+</html>
