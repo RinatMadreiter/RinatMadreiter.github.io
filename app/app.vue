@@ -65,6 +65,10 @@ textarea {
   font-family: 'Inter', sans-serif;
 }
 
+body #formbricks-modal-container input {
+  color: black;
+}
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -91,11 +95,5 @@ html {
 
 .welcome-navigaion {
   height: 100vh;
-}
-
-#formbricks-modal-container {
-  input {
-    color: black;
-  }
 }
 </style>
