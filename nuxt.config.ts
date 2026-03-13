@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   app: {
     baseURL: '/',
   },
-  modules: ['@nuxt/fonts', 'nuxt-security'],
+  modules: ['@nuxt/fonts'],
   fonts: {
     families: [
       {
