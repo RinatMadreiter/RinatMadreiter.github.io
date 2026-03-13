@@ -18,11 +18,10 @@
   },
   "devDependencies": {
     "nuxt": "^4.4.2",
-    "nuxt-security": "^2.5.1",
     "sass": "^1.92.0"
   },
   "overrides": {
     "serialize-javascript": "^7.0.3",
-     "glob": "^11.0.0"
+    "glob": "^11.0.0"
   }
 }
