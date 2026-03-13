@@ -92,4 +92,10 @@ html {
 .welcome-navigaion {
   height: 100vh;
 }
+
+#formbricks-modal-container {
+  input {
+    color: black;
+  }
+}
 </style>
