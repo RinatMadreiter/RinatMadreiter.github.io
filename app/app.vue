@@ -65,7 +65,7 @@ textarea {
   font-family: 'Inter', sans-serif;
 }
 
-body #formbricks-modal-container input {
+body #formbricks-modal-container .formbricks-form .relative:has(input, textarea) {
   color: black;
 }
 
