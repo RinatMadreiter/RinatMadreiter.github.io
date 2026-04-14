@@ -14,7 +14,7 @@
                     <div class="work-description">
                         <h3>{{ work.title }}</h3>
                         <p>{{ work.description }}</p>
-                        <a :href="work.url" :target="work.categories.includes('nuxt') ? '_self' : '_blank'"
+                        <a :href="work.url" :target="work.url === 'https://rinatmadreiter.github.io#top' ? '_self' : '_blank'"
                             rel="noopener noreferrer">
                             <button :class="work.categories.includes('angular') ? 'angular-button' : ''">
                                 {{ getButtonText(work) }}
