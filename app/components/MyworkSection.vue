@@ -35,6 +35,15 @@ import LoadedLazyImage from './LoadedLazyImage.vue';
 
 const works = [
     {
+        id: 'motoriki',
+        imgPath: '/img/work/motoriki.webp',
+        title: 'MotoRiki.at',
+        alt: 'Screenshot of the motoriki.at website displaying the home page',
+        description: 'Nuxt - based website with playful animation.',
+        url: 'https://motoriki.at',
+        categories: ['nuxt']
+    },
+    {
         id: 'photogallery',
         imgPath: '/img/work/photogallery.webp',
         title: 'Photo-Gallery',
