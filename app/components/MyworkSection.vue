@@ -85,7 +85,7 @@ const works = [
         title: 'Personal Website',
         alt: 'Screenshot of the current modern portfolio website',
         description: 'Nuxt - based personal portfolio website.',
-        url: '/#top',
+        url: '#top',
         categories: ['nuxt']
     },
     {
