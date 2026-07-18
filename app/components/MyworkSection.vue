@@ -6,6 +6,7 @@
             <button @click="showNuxt">Nuxt</button>
             <button @click="showJS">Java Script</button>
             <button @click="showAngular">Angular</button>
+            <button @click="showAstro">Astro</button>
         </div>
         <div class="work-collection" :class="{ 'set-min-height': activeFilterCount }">
             <div v-for="work in worksToShow" :key="work.id" class="single-work-container">
@@ -14,7 +15,8 @@
                     <div class="work-description">
                         <h3>{{ work.title }}</h3>
                         <p>{{ work.description }}</p>
-                        <a :href="work.url" :target="work.url === 'https://rinatmadreiter.github.io/#top' ? '_self' : '_blank'"
+                        <a :href="work.url"
+                            :target="work.url === 'https://rinatmadreiter.github.io/#top' ? '_self' : '_blank'"
                             rel="noopener noreferrer">
                             <button :class="work.categories.includes('angular') ? 'angular-button' : ''">
                                 {{ getButtonText(work) }}
@@ -35,11 +37,20 @@ import LoadedLazyImage from './LoadedLazyImage.vue';
 
 const works = [
     {
+        id: 'culturewithgen',
+        imgPath: '/img/work/culturewithgen.webp',
+        title: 'culturewithgen.com',
+        alt: 'Screenshot of the culturewithgen.com website displaying the home page',
+        description: 'Astro - based portfolio website with perfect lighthouse score 🚀.',
+        url: 'https://culturewithgen.com',
+        categories: ['astro']
+    },
+    {
         id: 'motoriki',
         imgPath: '/img/work/motoriki.webp',
         title: 'MotoRiki.at',
         alt: 'Screenshot of the motoriki.at website displaying the home page',
-        description: 'Nuxt - based website with playful animation.',
+        description: 'Nuxt - based website with playful animation 🤸🏻‍♂️.',
         url: 'https://motoriki.at',
         categories: ['nuxt']
     },
@@ -48,7 +59,7 @@ const works = [
         imgPath: '/img/work/photogallery.webp',
         title: 'Photo-Gallery',
         alt: 'Screenshot of the Photo Gallery app displaying beautiful pictures',
-        description: 'Java Script - based, impressive photo gallery',
+        description: 'Java Script - based, impressive photo gallery 🌄.',
         url: 'https://rinatmadreiter.github.io/Photo-Gallery/',
         categories: ['js']
     },
@@ -57,7 +68,7 @@ const works = [
         imgPath: '/img/work/quizapp.webp',
         title: 'Bootstrap Quizapp',
         alt: 'Screenshot of the Bootstrap Quizapp displaying a modern web quiz',
-        description: 'Boardgame Quizapp build with javascript and bootstrap',
+        description: 'Boardgame Quizapp build with javascript and bootstrap ❓.',
         url: 'https://rinatmadreiter.github.io/Quiz-App/',
         categories: ['js']
     },
@@ -66,7 +77,7 @@ const works = [
         imgPath: '/img/work/elpolloloco.webp',
         title: 'El Pollo Loco',
         alt: 'Screenshot of the elpolloloco app displaying a 2D western jump and run game',
-        description: 'Java Script - based jump and run desktop game.',
+        description: 'Java Script - based jump and run desktop game 🎮.',
         url: 'https://rinatmadreiter.github.io/El_Pollo_Loco/',
         categories: ['js']
     },
@@ -75,7 +86,7 @@ const works = [
         imgPath: '/img/work/pokedex.webp',
         title: 'Pokedex',
         alt: 'Screenshot of the Pokedex app displaying different pokemons',
-        description: 'Using the RESTful Pokémon API to display pokemon via JavaScript.',
+        description: 'Using the RESTful Pokémon API to display pokemon via JavaScript 🎮.',
         url: 'https://rinatmadreiter.github.io/pokedex/',
         categories: ['js']
     },
@@ -93,7 +104,7 @@ const works = [
         imgPath: '/img/work/cardgame.webp',
         title: 'Language Card Game',
         alt: 'Screenshot of cardgame app displaying the start screen of the game with lots of poker cards',
-        description: 'Angular - based card game.',
+        description: 'Angular - based card game ♥️♠️♦️♣️.',
         url: 'https://github.com/RinatMadreiter/ringoffire',
         categories: ['angular'],
         buttonText: 'Visit Repository'
@@ -106,7 +117,7 @@ const activeFilterCount = computed(() => {
 
 
 const filterClicked = ref(false);
-const selectedFilters = ref(new Set(['js', 'angular', 'nuxt'])); // all selected initially
+const selectedFilters = ref(new Set(['js', 'angular', 'nuxt', 'astro'])); // all selected initially
 
 const worksToShow = computed(() =>
     works.filter(work => work.categories.some(cat => selectedFilters.value.has(cat)))
@@ -114,7 +125,7 @@ const worksToShow = computed(() =>
 
 
 async function showAll() {
-    selectedFilters.value = new Set(['js', 'angular', 'nuxt']);
+    selectedFilters.value = new Set(['js', 'angular', 'nuxt', 'astro']);
     await triggerFilter();
 }
 
@@ -130,6 +141,11 @@ async function showAngular() {
 
 async function showNuxt() {
     selectedFilters.value = new Set(['nuxt']);
+    await triggerFilter();
+}
+
+async function showAstro() {
+    selectedFilters.value = new Set(['astro']);
     await triggerFilter();
 }
 
@@ -253,7 +269,7 @@ img {
     @media (max-width: 1220px) {
         min-height: 200vh;
     }
-    
+
     @media (max-width: 560px) {
         min-height: 130vh;
     }
